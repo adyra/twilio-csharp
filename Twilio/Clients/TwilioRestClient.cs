@@ -44,8 +44,9 @@ namespace Twilio.Clients
 		private string username;
 		private string password;
 		private string accountSid;
+        private string region;
 
-		public TwilioRestClient(string username, string password, String accountSid = null, HttpClient httpClient = null) {
+		public TwilioRestClient(string username, string password, string accountSid = null, string region = null, HttpClient httpClient = null) {
 			this.username = username;
 			this.password = password;
 			if (accountSid != null) {
@@ -59,6 +60,8 @@ namespace Twilio.Clients
 			} else {
 				this.httpClient = new WebRequestClient();
 			}
+
+            this.region = region;
 		}
 
 		#if NET40
