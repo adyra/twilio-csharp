@@ -136,4 +136,3 @@ and run the tests using `nunit`:
 ```bash
 > make test
 ```
-
